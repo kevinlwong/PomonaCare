@@ -1,12 +1,38 @@
-# React + Vite
+# Pomona Care AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Health Literacy for Spanish-speaking Families
 
-Currently, two official plugins are available:
+**Problem:** Many families in Pomona struggle to access or understand healthcare due to language barriers or health literacy.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Solution:** An AI-powered **health navigator app** that provides:
+- Natural language processing for Q&A in **Spanish and English.**
+    - Explanations of medical terms using AI summarization
+- Local clinic recommendations based on symptoms.
+- Document translation (e.g., prescriptions or insurance forms).
 
-## Expanding the ESLint configuration
+## Features
+- **Q&A and Medical Term Summarization** powered by OpenAI API
+- **Interactive Map** with nearby results using Google Maps API
+- **Bilingual Support** (English & Spanish)
+- **Document OCR Translation** with Tesseract.js
+- **Map Markers + Clickable Location Cards** for service locations
+- **Fast Dev Environment** using Vite + React
+- **Responsive UI** styled with TailwindCSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tools & Frameworks
+
+| Tool/Framework      | Purpose                                         |
+|---------------------|--------------------------------------------------|
+| **JavaScript**      | Core programming language                        |
+| **React**           | Frontend framework                               |
+| **Vite**            | Fast dev + build tooling                         |
+| **TailwindCSS**     | Utility-first styling                            |
+| **OpenAI API**      | Natural language processing for symptoms         |
+| **Google Maps API** | Service location & visualization                |
+| **Tesseract.js**    | OCR for translating documents    |
+| **Postman**         | API testing and prototyping                      |
+
+## Video Demo
+## 🎥 Demo
+
+[![Watch the video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)

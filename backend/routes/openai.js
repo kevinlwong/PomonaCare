@@ -1,3 +1,5 @@
+// communicate with chatbot
+
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -11,7 +13,9 @@ const openai = new OpenAI({
 });
 
 router.post("/", async (req, res) => {
-  const { prompt } = req.body;
+  res.json({ result: "Working fine!" });
+  console.log("Incoming body:", req.body);
+  const { prompt } = req.body.message;
 
   if (!prompt) {
     return res.status(400).json({ error: "Prompt is required." });

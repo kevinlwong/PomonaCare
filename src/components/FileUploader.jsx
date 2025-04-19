@@ -1,37 +1,43 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-export default function FileUploader({ onResult }) {
+export default function FileUploader({ onTextExtracted }) {
   const [file, setFile] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleUpload = async () => {
     if (!file) return;
+
+    setLoading(true);
     const formData = new FormData();
     formData.append('file', file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/translate', formData, {
+      const res = await axios.post('http://localhost:5000/api/extract-pdf', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
-      onResult(res.data);
+      onTextExtracted(res.data.text);
     } catch (err) {
-      console.error('Upload error:', err);
+      console.error('Upload failed:', err);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="text-center space-y-4">
+    <div className="text-center">
       <input
         type="file"
-        accept=".pdf,.doc,.docx,.txt"
+        accept=".pdf"
         onChange={(e) => setFile(e.target.files[0])}
-        className="block mx-auto"
+        className="mb-2"
       />
       <button
         onClick={handleUpload}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        disabled={loading}
+        className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
       >
-        Upload and Translate
+        {loading ? 'Extracting...' : 'Extract Text from PDF'}
       </button>
     </div>
   );

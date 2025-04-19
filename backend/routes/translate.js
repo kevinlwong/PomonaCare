@@ -1,1 +1,0 @@
-// Text/document translation logic

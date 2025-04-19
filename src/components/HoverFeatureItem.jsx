@@ -7,7 +7,7 @@ function HoverFeatureItem({ icon, en, es }) {
     <li
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="bg-white/10 backdrop-blur-sm shadow-md rounded-lg px-4 py-3 transition-all duration-300 flex items-start gap-3 w-full max-w-3xl mx-auto"
+      className="bg-white dark:bg-gray-800 backdrop-blur-sm shadow-md rounded-lg px-4 py-3 transition-all duration-300 flex items-start gap-3 w-full max-w-3xl mx-auto"
     >
       {/* Icon */}
       <span className="text-xl mt-1">{icon}</span>
@@ -20,7 +20,7 @@ function HoverFeatureItem({ icon, en, es }) {
             hovered ? "opacity-0" : "opacity-100"
           }`}
         >
-          <p className="text-white">{en}</p>
+          <p>{en}</p>
         </div>
 
         {/* Spanish Layer */}
@@ -29,7 +29,7 @@ function HoverFeatureItem({ icon, en, es }) {
             hovered ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="text-white">{es}</p>
+          <p>{es}</p>
         </div>
 
         {/* Ghost layer to lock height */}

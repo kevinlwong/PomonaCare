@@ -5,6 +5,7 @@ import TranslateDocuments from './Pages/TranslateDocuments';
 import SymptomToCare from './Pages/SymptomToCare';
 import ChatBot from './components/ChatBot';
 import NavBar from './components/NavBar';
+import MapComponent from "./components/Maps";
 
 function AppContent() {
 
