@@ -2,24 +2,36 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="w-full bg-white-900 text-white py-4 px-6 fixed top-0 right-0 flex justify-end shadow-md z-50">
-      <ul className="flex gap-6">
-        <li>
-          <Link to="/ChatBot" className="hover:text-blue-400 transition-colors">
+    <nav className="w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 z-50 shadow-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Logo Area - Left side */}
+        <Link to="/" className="text-xl font-bold">
+          <span className="text-white">POMONA CARE AI</span>
+        </Link>
+
+        {/* Navigation Links - Right side */}
+        <div className="flex items-center space-x-8">
+          <Link
+            to="/chatbot"
+            className="text-indigo-400 hover:text-purple-300 transition-colors duration-200"
+          >
             Chatbot
           </Link>
-        </li>
-        <li>
-          <Link to="/TranslateDocuments" className="hover:text-blue-400 transition-colors">
+          <Link
+            to="/translatedocuments"
+            className="text-indigo-400 hover:text-purple-300 transition-colors duration-200"
+          >
             Document Translator
           </Link>
-        </li>
-        <li>
-          <Link to="/SymptomToCare" className="hover:text-blue-400 transition-colors">
+          <Link
+            to="/symptomtocare"
+            className="text-indigo-400 hover:text-purple-300 transition-colors duration-200"
+          >
             Symptom Checker
           </Link>
-        </li>
-      </ul>
+          
+        </div>
+      </div>
     </nav>
   );
 }
