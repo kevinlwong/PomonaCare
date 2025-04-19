@@ -42,13 +42,13 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white pt-24 px-6 md:px-12">
       {/* Hero Section */}
       <section className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+        <h1 className="font-heading text-4xl md:text-5xl font-extrabold mb-4">
           Welcome to <span className="text-purple-600">PomonaCare AI</span>
         </h1>
-        <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2">
+        <h2 className="font-heading text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-2">
           Salud accesible e inclusiva para todos.
         </h2>
-        <p className="text-md md:text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+        <p className="font-heading text-md md:text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
           An AI-powered app that helps Spanish-speaking families in Pomona
           better understand their health and find nearby care.
         </p>
@@ -61,29 +61,29 @@ export default function Home() {
             to="/chatbot"
             en="🧠 Try the Health Chatbot"
             es="🧠 Probar el Chat de Salud"
-            color="bg-purple-600 hover:bg-purple-700 text-white hover:text-purple-200"
+            color="font-heading bg-purple-600 hover:bg-purple-700 text-white hover:text-purple-200"
           />
           <HoverTranslateButton
             to="/translatedocuments"
             en="📄 Translate a Document"
             es="📄 Traducir un Documento"
-            color="bg-gray-100 hover:bg-gray-200 hover:text-purple-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+            color="font-heading bg-gray-100 hover:bg-gray-200 hover:text-purple-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
           />
           <HoverTranslateButton
             to="/symptomtocare"
             en="🩺 Use Symptom Checker"
             es="🩺 Verificar Síntomas"
-            color="bg-green-600 hover:bg-green-700 text-white hover:text-purple-200"
+            color="font-heading bg-green-600 hover:bg-green-700 text-white hover:text-purple-200"
           />
         </div>
       </section>
 
       {/* Features Section */}
       <section className="max-w-4xl mx-auto">
-        <h3 className="text-2xl font-bold mb-4 text-center">
+        <h3 className="font-heading text-2xl font-bold mb-4 text-center">
           What PomonaCare AI Offers / Lo que ofrecemos
         </h3>
-        <ul className="space-y-4 text-left">
+        <ul className="font-heading space-y-4 text-left">
   <HoverFeatureItem
     icon="🧑🏽‍⚕️"
     en={<><strong>Health Q&A in Spanish & English</strong> - Chat with an AI that explains health info in your preferred language.</>}

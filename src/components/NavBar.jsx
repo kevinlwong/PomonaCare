@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 z-50 shadow-md">
+    <nav className="font-heading w-full bg-gray-800 text-white py-4 px-6 fixed top-0 left-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo Area - Left side */}
         <Link to="/" className="text-xl font-bold">
