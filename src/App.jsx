@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import TranslateDocuments from './Pages/TranslateDocuments';
 import SymptomToCare from './Pages/SymptomToCare';
-import Chatbot from './components/Chatbot';
+import ChatBot from './components/ChatBot';
 import NavBar from './components/NavBar';
 
 function AppContent() {
@@ -15,7 +15,7 @@ function AppContent() {
       <div className="pt-18">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ChatBot" element={<Chatbot />} />
+          <Route path="/ChatBot" element={<ChatBot />} />
           <Route path="/TranslateDocuments" element={<TranslateDocuments />} />
           <Route path="/SymptomToCare" element={<SymptomToCare />} />
         </Routes>

@@ -13,10 +13,15 @@ function HoverTranslateButton({ to, en, es, color }) {
         onMouseLeave={() => setHovered(false)}
         className={`transition-transform duration-500 ease-out px-6 py-3 rounded-md text-lg font-medium text-center ${color} hover:scale-105 w-72 overflow-hidden`}
       >
-        <div className="relative h-6">
+        <div className="relative w-full h-fit text-center py-4">
+
+        <span className="invisible absolute inset-0 flex items-center justify-center whitespace-nowrap">
+    {en.length > es.length ? en : es}
+  </span>
+
           {/* English Text */}
           <span
-            className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-in-out ${
               hovered ? "opacity-0" : "opacity-100"
             }`}
           >
@@ -25,7 +30,7 @@ function HoverTranslateButton({ to, en, es, color }) {
   
           {/* Spanish Text with 100ms delay */}
           <span
-            className={`absolute inset-0 transition-opacity duration-300 ease-in-out delay-200 ${
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ease-in-out delay-200 ${
               hovered ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -58,19 +63,19 @@ export default function Home() {
 
             
           <HoverTranslateButton
-            to="/chatbot"
+            to="/ChatBot"
             en="🧠 Try the Health Chatbot"
             es="🧠 Probar el Chat de Salud"
             color="font-heading bg-purple-600 hover:bg-purple-700 text-white hover:text-purple-200"
           />
           <HoverTranslateButton
-            to="/translatedocuments"
+            to="/TranslateDocuments"
             en="📄 Translate a Document"
             es="📄 Traducir un Documento"
             color="font-heading bg-gray-100 hover:bg-gray-200 hover:text-purple-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
           />
           <HoverTranslateButton
-            to="/symptomtocare"
+            to="/SymptomToCare"
             en="🩺 Use Symptom Checker"
             es="🩺 Verificar Síntomas"
             color="font-heading bg-green-600 hover:bg-green-700 text-white hover:text-purple-200"
