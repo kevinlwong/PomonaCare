@@ -1,11 +1,8 @@
-// communicate with chatbot
-
-import dotenv from "dotenv";
-dotenv.config();
-
 import express from "express";
 import OpenAI from "openai";
+import dotenv from "dotenv";
 
+dotenv.config();
 const router = express.Router();
 
 const openai = new OpenAI({
@@ -13,22 +10,22 @@ const openai = new OpenAI({
 });
 
 router.post("/", async (req, res) => {
-  res.json({ result: "Working fine!" });
-  console.log("Incoming body:", req.body);
-  const { prompt } = req.body.message;
+  const { prompt } = req.body;
+  console.log("💬 Prompt received:", prompt);
 
   if (!prompt) {
+    console.log("❌ No prompt received");
     return res.status(400).json({ error: "Prompt is required." });
   }
 
   try {
     const completion = await openai.chat.completions.create({
-      model: "gpt-4-turbo",
+      model: "gpt-3.5-turbo",
       messages: [
         {
           role: "system",
           content:
-            "You are a helpful bilingual healthcare assistant. Respond in clear, simple Spanish. The reply should also be in English after the Spanish response to provide clarity.",
+            "You are a helpful bilingual healthcare assistant. Respond in Spanish first, then English.",
         },
         {
           role: "user",
@@ -38,19 +35,12 @@ router.post("/", async (req, res) => {
     });
 
     const reply = completion.choices[0].message.content;
-
-    console.log("PROMPT:", prompt);
-    console.log("REPLY:", reply);
+    console.log("✅ OpenAI response:", reply);
 
     res.status(200).json({ result: reply });
-  } catch (error) {
-    console.error("OpenAI error (raw):", error);
-    console.error(
-      "OpenAI error (response):",
-      error.response?.data || error.message
-    );
-
-    res.status(500).json({ error: "Failed to get response from OpenAI" });
+  } catch (err) {
+    console.error("❌ OpenAI error:", err);
+    res.status(500).json({ error: "Failed to get response from OpenAI." });
   }
 });
 

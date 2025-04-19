@@ -90,13 +90,13 @@ export default function Home() {
         <ul className="font-heading space-y-4 text-left text-gray-800 dark:text-gray-200">
           <HoverFeatureItem
             icon="🧑🏽‍⚕️"
-            en={
+            es={
               <>
                 <strong>Health Q&A in Spanish & English</strong> - Chat with an
                 AI that explains health info in your preferred language.
               </>
             }
-            es={
+            en={
               <>
                 <strong>Preguntas de Salud en Español e Inglés</strong> - Habla
                 con una AI que explica información médica en tu idioma
@@ -106,13 +106,13 @@ export default function Home() {
           />
           <HoverFeatureItem
             icon="📍"
-            en={
+            es={
               <>
                 <strong>Nearby Clinic Recommendations</strong> - Find low-cost
                 care based on symptoms and zip code.
               </>
             }
-            es={
+            en={
               <>
                 <strong>Clínicas Cercanas</strong> - Encuentra atención médica
                 económica según tus síntomas y código postal.
@@ -121,12 +121,12 @@ export default function Home() {
           />
           <HoverFeatureItem
             icon="📘"
-            en={
+            es={
               <>
                 <strong>Simple Explanations of Medical Terms</strong> - Understand what prescriptions or diagnoses mean.
               </>
             }
-            es={
+            en={
               <>
                 <strong>Explicaciones Simples</strong> - Entiende qué significan recetas o diagnósticos.
               </>
@@ -134,12 +134,12 @@ export default function Home() {
           />
           <HoverFeatureItem
             icon="📄"
-            en={
+            es={
               <>
                 <strong>Document Translation</strong> - Instantly translate prescriptions or medical instructions into Spanish.
               </>
             }
-            es={
+            en={
               <>
                 <strong>Traducción de Documentos</strong> - Traduce recetas o instrucciones médicas al instante.
               </>
@@ -147,12 +147,12 @@ export default function Home() {
           />
           <HoverFeatureItem
             icon="🤝"
-            en={
+            es={
               <>
                 <strong>Community Connection</strong> - Link to local health events, clinics, and support services.
               </>
             }
-            es={
+            en={
               <>
                 <strong>Conexión Comunitaria</strong> - Encuentra eventos, clínicas y servicios de apoyo locales.
               </>

@@ -27,7 +27,7 @@ export async function translateText(english) {
       ],
       temperature: 0.3,
     });
-    // console.log("[🔁] OpenAI response:", response);
+   
 
     const spanish = response.choices[0].message.content.trim();
 

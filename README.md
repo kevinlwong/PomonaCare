@@ -35,4 +35,4 @@ Health Literacy for Spanish-speaking Families
 ## Video Demo
 ## 🎥 Demo
 
-[![Watch the video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+[![Watch the video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/QaoqcoicBgI?si=km1HsZXHEfxUGRWP)

@@ -18,7 +18,7 @@ export default function MapComponent() {
 
 function InnerMap() {
   const defaultCenter = { lat: 34.05, lng: -117.81 };
-  const [center, setCenter] = useState(defaultCenter);
+  const [center, setCenter] = useState(defaultCenter); // dont comment out
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState([]);
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -129,10 +129,10 @@ function InnerMap() {
             <div
               key={place.place_id}
               onClick={() => centerMapOnPlace(place)}
-              className="bg-gray-100 rounded-lg p-4 mb-4 shadow cursor-pointer hover:bg-gray-200 transition"
+              className="bg-gray-100 rounded-lg p-4 mb-4 dark:text-white dark:bg-gray-500 shadow cursor-pointer hover:bg-gray-200 transition"
             >
               <h2 className="text-lg font-semibold">{place.name}</h2>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-gray-100">
                 {place.vicinity || place.formatted_address}
               </p>
               {place.rating && <p className="text-sm">⭐ {place.rating} / 5</p>}

@@ -19,7 +19,7 @@ router.post('/extract-pdf', upload.single('file'), async (req, res) => {
 
     // ✅ Translate it using OpenAI
     const { english, spanish } = await translateText(extractedText);
-    console.log("[🌐] Translation output:", { english, spanish });
+    console.log("[🌐] Translation output:", { spanish });
 
     // ✅ Return both versions
     res.json({ success: true, english, spanish });
